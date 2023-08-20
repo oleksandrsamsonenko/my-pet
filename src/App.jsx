@@ -5,7 +5,6 @@ import store from './redux/store';
 import AuthLayout from 'components/AuthLayout/AuthLayout';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-
 Notify.init({
   timeout: 5000,
   width: '360px',
@@ -20,13 +19,13 @@ Notify.init({
   },
   success: {
     notiflixIconColor: '#ffffff',
-  }
-})
+  },
+});
 
 export const App = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter basename="/react-node-team-app">
+      <BrowserRouter basename="/my-pet">
         <AuthLayout>
           <UserRoutes />
         </AuthLayout>
